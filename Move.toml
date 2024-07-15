@@ -1,0 +1,12 @@
+[package]
+name = "perp-test"
+version = "0.0.0"
+
+[dependencies]
+
+score = { git = "https://github.com/hcjan/vip-score", subdir = "example/1.integrate-with-contract", rev = "main" }
+
+[addresses]
+std = "0x1"
+deployer = "0x2"
+
