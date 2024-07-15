@@ -14,7 +14,7 @@ module deployer::test {
         move_to(deployer, Controller { extend_ref, })
     }
 
-    public entry fun test(signer: &signer, acc: address) acquires Controller {
+    public entry fun call_test(signer: &signer, acc: address) acquires Controller {
         let controller = borrow_global<Controller>(@deployer);
         let deployer = &object::generate_signer_for_extending(&controller.extend_ref);
         score_distribute::set_spot_signer(deployer, acc);
